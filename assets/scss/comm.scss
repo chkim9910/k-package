@@ -950,6 +950,50 @@
   }
 }
 // kakao map end-----------------------------------------------------------
+.cup-inner {
+  display: flex;
+  gap: 20px;
+  height: 250px;
+}
+.cup {
+  width: 200px;
+  // margin-left: 50px;
+}
+.cup01-box {
+  width: 250px;
+}
+.cup01 {
+  animation: cup01 1s linear infinite;
+}
+.cup02-box {
+  width: 250px;
+}
+.cup02 {
+  width: 200px;
+  animation: cup02 5s linear infinite;
+}
+@keyframes cup01 {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(-5deg);
+  }
+}
+@keyframes cup02 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 // --------------------------------------------------------
 
