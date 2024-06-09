@@ -51,14 +51,12 @@ q {
   quotes: none;
 }
 
-blockquote:before,
-blockquote:after {
+blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-q:before,
-q:after {
+q:before, q:after {
   content: "";
   content: none;
 }
@@ -88,14 +86,11 @@ body {
 }
 
 /* 뷰표트 변환시 폰트크기 자동확대 방지 */
-input[type="text"],
-input[type="password"],
-input[type="submit"],
-input[type="search"] {
+input[type=text], input[type=password], input[type=submit], input[type=search] {
   -webkit-appearance: none;
   border-radius: 0;
 }
-input:checked[type="checkbox"] {
+input:checked[type=checkbox] {
   background-color: #666;
   -webkit-appearance: checkbox;
 }
@@ -105,14 +100,11 @@ button {
   border-radius: 0;
 }
 
-input[type="button"],
-input[type="submit"],
-input[type="reset"],
-input[type="file"] {
+input[type=button], input[type=submit], input[type=reset], input[type=file] {
   -webkit-appearance: button;
   border-radius: 0;
 }
-input[type="search"]::-webkit-search-cancel-button {
+input[type=search]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 
@@ -121,10 +113,7 @@ input[type="search"]::-webkit-search-cancel-button {
 body {
   font-size: 16px;
   line-height: 1.5;
-  font-family: "Pretendard Variable", "Pretendard", "-apple-system",
-    "BlinkMacSystemFont", system-ui, "Roboto", "Helvetica Neue", "Segoe UI",
-    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkMacSystemFont", system-ui, "Roboto", "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   color: #fff;
   background-color: #000;
 }
@@ -140,8 +129,7 @@ a {
   color: #fff;
   text-decoration: none;
 }
-a:active,
-a:hover {
+a:active, a:hover {
   text-decoration: none;
 }
 
@@ -160,7 +148,7 @@ hr {
   display: none;
 }
 
-input[type="password"] {
+input[type=password] {
   font-family: "Malgun Gothic";
 }
 
@@ -295,8 +283,14 @@ button {
   background-color: #d92b2b;
 }
 .wrap .inner {
+  min-width: 1280px;
   max-width: 1280px;
   margin: 0 auto;
+}
+
+.accordion-button:not(.collapsed) {
+  background: #b467fd;
+  color: #fff;
 }
 
 #header {
@@ -704,7 +698,7 @@ button {
   height: 45px;
   background: rgba(217, 43, 43, 0.1);
   -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   border-radius: 45px;
   text-align: center;
   line-height: 45px;
@@ -1121,9 +1115,9 @@ button {
   width: 100%;
   height: 100vh;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   -o-object-position: 50% 100%;
-  object-position: 50% 100%;
+     object-position: 50% 100%;
 }
 @media screen and (max-width: 768px) {
   .main-swiper {
@@ -1172,7 +1166,7 @@ button {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
   filter: saturate(60%) opacity(95%);
 }
@@ -1565,8 +1559,7 @@ button {
   flex: 1;
 }
 .notice-wrap .noti-icon {
-  background: url(../../images/main/icon/icon_dbarrow_wt.svg) no-repeat center
-    center;
+  background: url(../../images/main/icon/icon_dbarrow_wt.svg) no-repeat center center;
   width: 0;
   height: 0;
   background-size: contain;
@@ -1632,7 +1625,7 @@ button {
   height: 100px;
   position: relative;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
   filter: grayscale(100%) opacity(90%);
 }
 .ptn-auto-scroll-wrap .splide__slide .sm {
@@ -1653,12 +1646,7 @@ button {
 }
 .main-visual-sub1 {
   height: 80vh;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0) 40%,
-      rgb(0, 0, 0) 100%
-    ),
-    url(https://github.com/minji0164/KNB-Renewal/blob/main/images/sub1/main-visual/background.png?raw=true);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgb(0, 0, 0) 100%), url(https://github.com/minji0164/KNB-Renewal/blob/main/images/sub1/main-visual/background.png?raw=true);
   background-size: cover;
   background-position: center;
 }
@@ -1824,20 +1812,8 @@ button {
 .sec-work .posters {
   display: flex;
   justify-content: space-between;
-  -webkit-mask: linear-gradient(
-    to top,
-    transparent 0%,
-    black 10%,
-    black 90%,
-    transparent 100%
-  );
-  mask: linear-gradient(
-    to top,
-    transparent 0%,
-    black 10%,
-    black 90%,
-    transparent 100%
-  );
+  -webkit-mask: linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%);
+          mask: linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 .sec-work .posters .poster-list {
   display: flex;
@@ -1914,23 +1890,19 @@ button {
   font-size: 18px;
 }
 .sec-velue .card-list:nth-child(1) {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(../../images/sub1/cards/card1.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../images/sub1/cards/card1.png);
   background-size: cover;
 }
 .sec-velue .card-list:nth-child(2) {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(../../images/sub1/cards/card2.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../images/sub1/cards/card2.png);
   background-size: cover;
 }
 .sec-velue .card-list:nth-child(3) {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(../../images/sub1/cards/card3.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../images/sub1/cards/card3.jpg);
   background-size: cover;
 }
 .sec-velue .card-list:nth-child(4) {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(../../images/sub1/cards/card4.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../images/sub1/cards/card4.jpg);
   background-size: cover;
 }
 .sec-velue .hvr-shutter-out-vertical:before {
@@ -1950,8 +1922,7 @@ button {
     width: 375px;
     height: 170px;
   }
-  .sec-velue .card-list:nth-child(3),
-  .sec-velue .card-list:nth-child(4) {
+  .sec-velue .card-list:nth-child(3), .sec-velue .card-list:nth-child(4) {
     margin-top: 20px;
   }
   .sec-velue .card-list:nth-child(1) {
@@ -1960,8 +1931,7 @@ button {
   .sec-velue .card-list:nth-child(2) {
     background-position: 50% 70%;
   }
-  .sec-velue .card-list:nth-child(3),
-  .sec-velue .card-list:nth-child(4) {
+  .sec-velue .card-list:nth-child(3), .sec-velue .card-list:nth-child(4) {
     background-position: 50% 55%;
   }
   .sec-velue .card-list .material-symbols-rounded {
@@ -1988,9 +1958,7 @@ button {
     width: 100%;
     height: 120px;
   }
-  .sec-velue .card-list:nth-child(2),
-  .sec-velue .card-list:nth-child(3),
-  .sec-velue .card-list:nth-child(4) {
+  .sec-velue .card-list:nth-child(2), .sec-velue .card-list:nth-child(3), .sec-velue .card-list:nth-child(4) {
     margin-top: 10px;
   }
   .sec-velue .card-list .material-symbols-rounded {
@@ -2194,9 +2162,7 @@ button {
 }
 .main-visual-sub2 {
   height: 80vh;
-  background: linear-gradient(0deg, #000 0.1%, rgba(0, 0, 0, 0) 78.23%),
-    url(../../images/sub2/main-visual/main-visual-sub2.jpg) no-repeat 50% 50% /
-      cover;
+  background: linear-gradient(0deg, #000 0.1%, rgba(0, 0, 0, 0) 78.23%), url(../../images/sub2/main-visual/main-visual-sub2.jpg) no-repeat 50% 50%/cover;
 }
 .main-visual-sub2 .txt-wrap {
   margin-top: 100px;
@@ -2334,111 +2300,22 @@ button {
   }
 }
 .performance-info .poster-1 {
-  background: conic-gradient(
-      from -43deg at 44.72% 48.26%,
-      rgba(0, 0, 0, 0.2) 0deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    conic-gradient(
-      from 225deg at 45.38% 54.89%,
-      rgba(0, 0, 0, 0.7) 0deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    url(../../images/sub2/perfermance-info/poster-1.jpg) no-repeat 50% 100% /
-      cover;
+  background: conic-gradient(from -43deg at 44.72% 48.26%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.38% 54.89%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-1.jpg) no-repeat 50% 100%/cover;
 }
 .performance-info .poster-2 {
-  background: conic-gradient(
-      from -42deg at 44.48% 50.03%,
-      rgba(0, 0, 0, 0.5) 0deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    conic-gradient(
-      from 225deg at 45.59% 54.88%,
-      rgba(0, 0, 0, 0.7) 0deg,
-      rgba(0, 0, 0, 0.3) 208.1094431877deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    url(../../images/sub2/perfermance-info/poster-2.jpg) no-repeat 50% 100% /
-      cover;
+  background: conic-gradient(from -42deg at 44.48% 50.03%, rgba(0, 0, 0, 0.5) 0deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.59% 54.88%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0.3) 208.1094431877deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-2.jpg) no-repeat 50% 100%/cover;
 }
 .performance-info .poster-3 {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.3) 0%,
-      rgba(0, 0, 0, 0.3) 100%
-    ),
-    conic-gradient(
-      from -46deg at 45.14% 53.05%,
-      rgba(0, 0, 0, 0.2) 0deg,
-      rgba(0, 0, 0, 0.12) 152.508494854deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    conic-gradient(
-      from 225deg at 45.38% 54.71%,
-      rgba(0, 0, 0, 0.7) 0deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    url(../../images/sub2/perfermance-info/poster-3.jpg) no-repeat 50% 100% /
-      cover;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), conic-gradient(from -46deg at 45.14% 53.05%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0.12) 152.508494854deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.38% 54.71%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-3.jpg) no-repeat 50% 100%/cover;
 }
 .performance-info .poster-4 {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.3) 0%,
-      rgba(0, 0, 0, 0.3) 100%
-    ),
-    conic-gradient(
-      from -46deg at 45.14% 53.05%,
-      rgba(0, 0, 0, 0.2) 0deg,
-      rgba(0, 0, 0, 0.12) 152.508494854deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    conic-gradient(
-      from 225deg at 45.38% 54.71%,
-      rgba(0, 0, 0, 0.7) 0deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    url(../../images/sub2/perfermance-info/poster-4.jpg) no-repeat 50% 50% /
-      cover;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), conic-gradient(from -46deg at 45.14% 53.05%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0.12) 152.508494854deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.38% 54.71%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-4.jpg) no-repeat 50% 50%/cover;
 }
 .performance-info .poster-5 {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.2) 0%,
-      rgba(0, 0, 0, 0.2) 100%
-    ),
-    conic-gradient(
-      from -39deg at 43.61% 53.1%,
-      rgba(0, 0, 0, 0.2) 0deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    conic-gradient(
-      from 225deg at 45.59% 54.76%,
-      rgba(0, 0, 0, 0.7) 0deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    url(../../images/sub2/perfermance-info/poster-5.jpg) no-repeat 50% 100% /
-      cover;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), conic-gradient(from -39deg at 43.61% 53.1%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.59% 54.76%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-5.jpg) no-repeat 50% 100%/cover;
 }
 .performance-info .poster-6 {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.2) 0%,
-      rgba(0, 0, 0, 0.2) 100%
-    ),
-    conic-gradient(
-      from -39deg at 43.61% 53.1%,
-      rgba(0, 0, 0, 0.2) 0deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    conic-gradient(
-      from 225deg at 45.59% 54.76%,
-      rgba(0, 0, 0, 0.7) 0deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    url(../../images/sub2/perfermance-info/poster-6.png) no-repeat 50% 100% /
-      cover;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), conic-gradient(from -39deg at 43.61% 53.1%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.59% 54.76%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-6.png) no-repeat 50% 100%/cover;
 }
 @media screen and (max-width: 1280px) {
   .performance-info .arr-icon {
@@ -2459,12 +2336,7 @@ button {
   content: "";
   width: 100%;
   height: 10px;
-  background: linear-gradient(
-    90deg,
-    #d92b2b -27.29%,
-    rgba(217, 43, 43, 0.41) 15.39%,
-    rgba(0, 0, 0, 0) 100.12%
-  );
+  background: linear-gradient(90deg, #d92b2b -27.29%, rgba(217, 43, 43, 0.41) 15.39%, rgba(0, 0, 0, 0) 100.12%);
   transform: rotate(180deg);
 }
 .before-monthly-schedule .inner {
@@ -3100,11 +2972,7 @@ button {
   position: absolute;
   top: -100px;
   left: 10px;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.15) 22.61%,
-    rgba(255, 255, 255, 0) 71.86%
-  );
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 22.61%, rgba(255, 255, 255, 0) 71.86%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -3120,11 +2988,7 @@ button {
     letter-spacing: normal;
     line-height: normal;
     color: #fff;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.15) 22.61%,
-      rgba(255, 255, 255, 0) 71.86%
-    );
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 22.61%, rgba(255, 255, 255, 0) 71.86%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -3138,109 +3002,9 @@ button {
     letter-spacing: normal;
     line-height: normal;
     color: #fff;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.15) 22.61%,
-      rgba(255, 255, 255, 0) 71.86%
-    );
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 22.61%, rgba(255, 255, 255, 0) 71.86%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-} /*# sourceMappingURL=comm.css.map */
-
-/* kakao map */
-.map {
-  position: absolute;
-  left: 0;
-  bottom: 40px;
-  width: 200px;
-  height: 122px;
-  margin-left: -98px;
-  text-align: left;
-  overflow: hidden;
-  font-size: 12px;
-  font-family: "Malgun Gothic", dotum, "돋움", sans-serif;
-  line-height: 1.5;
-}
-.map * {
-  padding: 0;
-  margin: 0;
-}
-.map .info {
-  width: 286px;
-  height: 110px;
-  border-radius: 5px;
-  border-bottom: 2px solid #ccc;
-  border-right: 1px solid #ccc;
-  overflow: hidden;
-  background: #fff;
-}
-.map .info:nth-child(1) {
-  border: 0;
-  box-shadow: 0px 1px 2px #888;
-}
-.info .title {
-  padding: 5px 0 0 10px;
-  height: 30px;
-  background: #eee;
-  border-bottom: 1px solid #ddd;
-  font-size: 16px;
-  font-weight: bold;
-  color: #000;
-}
-/* .info .close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: #888;
-  width: 17px;
-  height: 17px;
-  background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png");
-}
-.info .close:hover {
-  cursor: pointer;
-} */
-.info .body {
-  position: relative;
-  overflow: hidden;
-}
-.info .desc {
-  position: relative;
-  margin: 13px 0 0 18px;
-  height: 75px;
-  color: #000;
-}
-.desc .ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.desc .jibun {
-  font-size: 11px;
-  color: #888;
-  margin-top: -2px;
-}
-.info .img {
-  position: absolute;
-  top: 6px;
-  left: 5px;
-  width: 0px;
-  height: 0px;
-  border: 1px solid #ddd;
-  color: #888;
-  overflow: hidden;
-}
-.info:after {
-  content: "";
-  position: absolute;
-  margin-left: -12px;
-  left: 50%;
-  bottom: 0;
-  width: 22px;
-  height: 12px;
-  background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png");
-}
-.info .link {
-  color: #5085bb;
-}
+}/*# sourceMappingURL=comm.css.map */
