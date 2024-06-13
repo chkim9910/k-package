@@ -34,6 +34,8 @@ $(function () {
   });
   gsap.set(title, { autoAlpha: 0, x: -180 });
 
+  body.style.overflow = "hidden";
+
   // timeline
   tl.to(
     circle2,
