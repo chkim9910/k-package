@@ -1120,7 +1120,9 @@ button {
   }
 }
 .box-title {
-  padding-top: 16px;
+  margin-top: 20px !important;
+  padding: 16px;
+  color: #f9c203;
 }
 
 .map {
@@ -1218,6 +1220,10 @@ button {
   color: #5085bb;
 }
 
+.cup-wrap {
+  height: 350px;
+}
+
 .cup-box {
   display: flex;
   gap: 20px;
@@ -1267,6 +1273,10 @@ button {
     transform: rotate(360deg);
   }
 }
+.purecounter-wrap {
+  height: 300px;
+}
+
 .purecounter-box {
   display: flex;
   align-items: flex-end;
@@ -1290,7 +1300,7 @@ button {
 .banner-box {
   position: relative;
   overflow-x: visible;
-  margin-top: 50px;
+  height: 50px;
 }
 
 .banner-inner {
@@ -1326,6 +1336,34 @@ button {
 
 .banner-graphic {
   animation: cup02 8s linear infinite;
+}
+
+.swiper-box {
+  height: 500px;
+  margin-bottom: 100px;
+  position: relative;
+  top: 250px;
+}
+
+.swiper {
+  width: 500px;
+  height: 219px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  height: 40px;
+}
+
+.swiper-text {
+  font-size: 16px;
+  color: #222;
 }
 
 .inner-box {

@@ -54,6 +54,27 @@ $(function () {
   function closeOverlay() {
     overlay.setMap(null);
   }
-
+  // purecounter.js-------------------------------------------------
   new PureCounter({ selector: ".purecounter", separator: true });
+
+  // swiper.js------------------------------------------------------
+  let swiper = new Swiper(".mySwiper", {
+    initialSlide: 3,
+    direction: "vertical",
+    effect: "coverflow",
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop: true,
+    fadeEffect: {
+      crossFade: true,
+    },
+    coverflowEffect: {
+      rotate: 10,
+      stretch: -21,
+      depth: 200,
+      modifier: 1,
+      slideShadows: true,
+    },
+    autoplay: true,
+  });
 });

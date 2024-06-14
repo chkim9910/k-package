@@ -1,5 +1,7 @@
 .box-title {
-  padding-top: 16px;
+  margin-top: 20px !important;
+  padding: 16px;
+  color: #f9c203;
 }
 
 // kakao map start-----------------------------------------------------------
@@ -113,6 +115,9 @@
 // kakao map end-----------------------------------------------------------
 
 // cup-box start-----------------------------------------------------------
+.cup-wrap {
+  height: 350px;
+}
 .cup-box {
   display: flex;
   gap: 20px;
@@ -160,6 +165,9 @@
 // cup-box end-----------------------------------------------------------
 
 // purecounter-box start-------------------------------------------------
+.purecounter-wrap {
+  height: 300px;
+}
 .purecounter-box {
   display: flex;
   align-items: flex-end;
@@ -182,7 +190,8 @@
 .banner-box {
   position: relative;
   overflow-x: visible;
-  margin-top: 50px;
+  height: 50px;
+  // margin-top: 50px;
 }
 .banner-inner {
   height: 190px;
@@ -217,3 +226,30 @@
   animation: cup02 8s linear infinite;
 }
 // banner end-----------------------------------------------------------
+
+// swiper start---------------------------------------------------------
+.swiper-box {
+  height: 500px;
+  margin-bottom: 100px;
+  position: relative;
+  top: 250px;
+}
+.swiper {
+  width: 500px;
+  height: 219px;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  height: 40px;
+}
+.swiper-text {
+  font-size: 16px;
+  color: #222;
+}
+// swiper end-----------------------------------------------------------
