@@ -27,6 +27,9 @@
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services,clusterer,drawing"
     ></script>
+    <!-- purecounter -->
+    <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+    <!-- comm.js -->
     <script defer src="./assets/js/comm.js"></script>
   </head>
   <body>
@@ -35,113 +38,120 @@
         <div class="wrapper">
           <a class="menu" href="landing.html"> Landing-page1 </a>
           <a class="menu" href="landing2.html"> Landing-page2 </a>
+          <a class="menu" href="gsap.html"> gsap-page </a>
         </div>
       </header>
-      <div class="inner">
+      <div class="inner-wrap">
+        <!-- kakao map api -->
+        <div class="inner kakao-map-box">
+          <h2 class="box-title">kakao map api</h2>
+          <br />
+          <div id="map" style="width: 500px; height: 400px"></div>
+          <br />
+          <h2>bootstrap accordion flush</h2>
+        </div>
         <br />
-        <h2>kakao map api</h2>
-        <br />
-        <div id="map" style="width: 500px; height: 400px"></div>
-        <br />
-        <h2>bootstrap accordion flush</h2>
-        <br />
-        <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne"
+        <!-- bootstrap accordion box -->
+        <div class="inner accordion-box">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  Accordion Item #1
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#accordionExample"
               >
-                Accordion Item #1
-              </button>
-            </h2>
-            <div
-              id="collapseOne"
-              class="accordion-collapse collapse show"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body">
-                <strong>This is the first item's accordion body.</strong> It is
-                shown by default, until the collapse plugin adds the appropriate
-                classes that we use to style each element. These classes control
-                the overall appearance, as well as the showing and hiding via
-                CSS transitions. You can modify any of this with custom CSS or
-                overriding our default variables. It's also worth noting that
-                just about any HTML can go within the
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+                <div class="accordion-body">
+                  <strong>This is the first item's accordion body.</strong> It
+                  is shown by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
               </div>
             </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo"
-                aria-expanded="false"
-                aria-controls="collapseTwo"
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  Accordion Item #2
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
               >
-                Accordion Item #2
-              </button>
-            </h2>
-            <div
-              id="collapseTwo"
-              class="accordion-collapse collapse"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body">
-                <strong>This is the second item's accordion body.</strong> It is
-                hidden by default, until the collapse plugin adds the
-                appropriate classes that we use to style each element. These
-                classes control the overall appearance, as well as the showing
-                and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It's also worth
-                noting that just about any HTML can go within the
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It
+                  is hidden by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
               </div>
             </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseThree"
-                aria-expanded="false"
-                aria-controls="collapseThree"
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Accordion Item #3
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
               >
-                Accordion Item #3
-              </button>
-            </h2>
-            <div
-              id="collapseThree"
-              class="accordion-collapse collapse"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body">
-                <strong>This is the third item's accordion body.</strong> It is
-                hidden by default, until the collapse plugin adds the
-                appropriate classes that we use to style each element. These
-                classes control the overall appearance, as well as the showing
-                and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It's also worth
-                noting that just about any HTML can go within the
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It
+                  is hidden by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
               </div>
             </div>
           </div>
         </div>
         <br />
-        <div class="cup-inner">
+        <!-- simple animation -->
+        <div class="inner cup-box">
           <div class="cup01-box">
             <img
               class="cup cup01"
@@ -151,6 +161,62 @@
           </div>
           <div class="cup02-box">
             <img class="cup cup02" src="./assets/img/Union.png" alt="도형" />
+          </div>
+        </div>
+        <br />
+        <!-- precounter library -->
+        <div class="inner purecounter-box">
+          <p class="counter">
+            <span
+              data-purecounter-start="10000"
+              data-purecounter-end="53226"
+              class="purecounter"
+              >0</span
+            >
+          </p>
+          <span class="measure">건</span>
+        </div>
+        <!-- banner -->
+        <div class="banner-box">
+          <div class="banner-inner">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="banner-text">OUR MISSION</span>
+            <img
+              class="banner-graphic"
+              src="./assets/img/Union.png"
+              alt="union graphic"
+            />
+            <span class="banner-text">OUR MISSION</span>
+            <img
+              class="banner-graphic"
+              src="./assets/img/Union.png"
+              alt="union graphic"
+            />
+            <span class="banner-text">OUR MISSION</span>
+            <img
+              class="banner-graphic"
+              src="./assets/img/Union.png"
+              alt="union graphic"
+            />
+            <span class="banner-text">OUR MISSION</span>
+            <img
+              class="banner-graphic"
+              src="./assets/img/Union.png"
+              alt="union graphic"
+            />
+            <span class="banner-text">OUR MISSION</span>
+            <img
+              class="banner-graphic"
+              src="./assets/img/Union.png"
+              alt="union graphic"
+            />
+            <span class="banner-text">OUR MISSION</span>
+            <img
+              class="banner-graphic"
+              src="./assets/img/Union.png"
+              alt="union graphic"
+            />
+            &nbsp;&nbsp;&nbsp;
           </div>
         </div>
       </div>
