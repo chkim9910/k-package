@@ -5,6 +5,7 @@ $(function () {
   let rect = document.querySelector(".rect");
   let rect2 = document.querySelector(".rect2");
   let rect3 = document.querySelector(".rect3");
+  let rect4 = document.querySelector(".rect4");
   let title = document.querySelector(".title");
   let preloader = document.querySelector(".preloader");
   let wrap = document.querySelector(".wrap");
@@ -24,19 +25,23 @@ $(function () {
     // x: -1000,
   });
   gsap.set(rect2, {
-    y: 1500,
+    y: "100%",
   });
   gsap.set(rect, {
-    x: -2000,
+    // x: -2000,
+    y: "-150%",
   });
   gsap.set(rect3, {
-    y: -2000,
+    x: -2000,
+  });
+  gsap.set(rect4, {
+    x: 2000,
   });
   gsap.set(title, { autoAlpha: 0, x: -180 });
 
   body.style.overflow = "hidden";
 
-  // timeline
+  // timeline ---------------------------------------------------------------
   tl.to(
     circle2,
     {
@@ -52,18 +57,21 @@ $(function () {
     })
     .to(circle3, { opacity: 1, scale: 7, duration: 1.5, ease: "bounce.out" })
 
-    .to(rect2, { y: 0, duration: 0.8 })
-    .to(rect, { x: 0, duration: 0.8, delay: 0.2 })
-    .to(rect3, { y: 0, duration: 0.8, delay: 0.2 })
+    .to(rect2, { y: "-50%", duration: 0.8, ease: "expo.out" })
+    .to(rect, { y: "-50%", duration: 0.8, ease: "expo.out" }, "<")
+    .to(rect3, { x: 0, duration: 1.5, delay: 0.2, ease: "expo.out" })
+    .to(rect4, { x: 0, duration: 0.8, delay: 0.2, ease: "expo.out" }, "<")
     .to(rect3, {
       scale: 0.1,
       duration: 1,
-      delay: 0.6,
-      /* ease: "elastic.out(1,0.5)" */
+      delay: 0,
+      // /* ease: "elastic.out(1,0.5)" */
     })
+
     .to(circle2, { opacity: 0, duration: 0.1 }, "+=1")
     .to(circle3, { opacity: 0, duration: 0.1 }, "<")
     .to(rect3, { x: -220, duration: 0.8 })
+
     .to(title, { autoAlpha: 1, duration: 1 }, "+=0.3")
     .to(preloader, {
       autoAlpha: 0,

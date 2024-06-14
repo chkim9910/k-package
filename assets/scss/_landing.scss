@@ -51,26 +51,38 @@
   z-index: 2;
 }
 // rect
+.rect-box {
+  display: flex;
+}
 .rect {
   position: absolute;
-  width: 100%;
+  left: 0;
+  width: 50%;
   height: 100vh;
   background: rgb(255, 81, 0);
   z-index: 4;
 }
 .rect2 {
   position: absolute;
-  width: 100%;
+  right: 0;
+  width: 50%;
   height: 100vh;
-  background: #000;
+  background: #000000;
   z-index: 3;
 }
 .rect3 {
   position: absolute;
   width: 1920px;
   height: 100vh;
-  background: #000;
+  background: #4d23e7;
   z-index: 5;
+}
+.rect4 {
+  position: absolute;
+  width: 1920px;
+  height: 100vh;
+  background: #000;
+  z-index: 4;
 }
 // wrap
 .wrap {
