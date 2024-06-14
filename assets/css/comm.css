@@ -1339,18 +1339,36 @@ button {
 }
 
 .swiper-box {
-  height: 300px;
+  height: 400px;
   margin-bottom: 100px;
   position: relative;
   top: 250px;
 }
-
-.swiper {
+.swiper-box .swiper {
   width: 500px;
-  height: 219px;
+  height: 309px;
 }
-
-.swiper-slide {
+.swiper-box .swiper::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 70px;
+  background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0));
+  position: absolute;
+  bottom: 0px;
+  z-index: 10;
+}
+.swiper-box .swiper::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 70px;
+  background-image: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0));
+  position: absolute;
+  top: 0px;
+  z-index: 10;
+}
+.swiper-box .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -1358,12 +1376,31 @@ button {
   justify-content: center;
   align-items: center;
   border-radius: 16px;
-  height: 40px;
+  height: 60px;
 }
-
-.swiper-text {
-  font-size: 16px;
+.swiper-box .swiper-slide-next,
+.swiper-box .swiper-slide-prev {
+  opacity: 80%;
+}
+.swiper-box .swiper-text-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.swiper-box .fa-circle-check {
+  color: #494949;
+  font-size: 20px;
+}
+.swiper-box .swiper-text {
+  font-size: 20px;
   color: #222;
+}
+.swiper-box .swiper-highlight-text {
+  font-size: 30px;
+  font-weight: 700;
+  color: #222;
+  padding-left: 6px;
 }
 
 .tab-box {

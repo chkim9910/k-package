@@ -59,7 +59,7 @@ $(function () {
 
   // swiper.js------------------------------------------------------
   let swiper = new Swiper(".mySwiper", {
-    initialSlide: 3,
+    initialSlide: 4,
     direction: "vertical",
     effect: "coverflow",
     centeredSlides: true,
@@ -69,18 +69,26 @@ $(function () {
       crossFade: true,
     },
     coverflowEffect: {
-      rotate: 10,
-      stretch: -21,
-      depth: 200,
-      modifier: 1,
+      rotate: 28,
+      stretch: -31,
+      depth: 380,
+      modifier: 0.7,
       slideShadows: true,
     },
     autoplay: true,
   });
 
-  // Initialization for ES Users
+  // swiper-slide-active의 icon 색상 바꾸기
+  let swiperSlideArray = Array.from(document.querySelectorAll(".swiper-slide"));
+  let swiperActive = document.querySelector(".swiper-slide-active");
 
-  // initMDB({ Tab });
+  for (i = 0; i < swiperSlideArray.length; i++) {
+    console.log(swiperSlideArray[i]);
+    if (swiperSlideArray[i].classList.contains("swiper-slide-active")) {
+      let swiperIcon = swiperSlideArray[i].querySelector(".fa-circle-check");
+      swiperIcon.style.color = "#a1c9de";
+    }
+  }
 
   // MDB tabs
   const triggerTabList = document.querySelectorAll("#ex1 a");
