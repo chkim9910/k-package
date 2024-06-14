@@ -229,7 +229,7 @@
 
 // swiper start---------------------------------------------------------
 .swiper-box {
-  height: 500px;
+  height: 300px;
   margin-bottom: 100px;
   position: relative;
   top: 250px;
@@ -253,3 +253,114 @@
   color: #222;
 }
 // swiper end-----------------------------------------------------------
+
+// tab start------------------------------------------------------------
+.tab-box {
+  height: 500px;
+  position: relative;
+  top: 150px;
+}
+.nav {
+  width: fit-content;
+}
+.nav-tabs {
+  .nav-link {
+    display: flex;
+    // justify-content: flex-start;
+    padding-left: 40px;
+    width: 190px;
+    color: #fff;
+    font-size: 16px;
+    // border-radius: 10px 0 0 0;
+    position: relative;
+    background: url("/assets/img/consulting-unactive.png") no-repeat 50% 50% /
+      cover;
+    transition: all 0.2s;
+    &.active {
+      background: url("/assets/img/consulting-background.png") no-repeat 50% 50% /
+        cover;
+      // background: #ffffff;
+      background-color: transparent;
+      color: #494949;
+      border-color: transparent;
+    }
+    &:hover {
+      background: url("/assets/img/consulting-background.png") no-repeat 50% 50% /
+        cover;
+      // background: #ffffff;
+      background-color: transparent;
+      color: #494949;
+      border-color: transparent;
+    }
+  }
+  .nav-item:first-child {
+    position: relative;
+    z-index: 4;
+  }
+  .nav-item:nth-child(2) {
+    transform: translateX(-45px);
+    position: relative;
+    z-index: 3;
+  }
+  .nav-item:nth-child(3) {
+    transform: translateX(-89px);
+    position: relative;
+    z-index: 2;
+  }
+  .nav-item:nth-child(4) {
+    transform: translateX(-132px);
+    position: relative;
+    z-index: 1;
+  }
+}
+.tab-content {
+  width: 675px;
+  height: 344px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  position: relative;
+  top: -16px;
+  border-radius: 0 16px 16px 16px;
+  padding: 20px;
+
+  .tab-pane {
+    color: #494949;
+
+    .top-box,
+    .bottom-box,
+    .check-box {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+
+      .name,
+      .phone {
+        flex: 1;
+      }
+
+      .form-check-label {
+        width: 75%;
+        color: #b6b6b6;
+        font-size: 14px;
+      }
+
+      .btn {
+        background: #7daac1;
+        width: 20%;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .fa-arrow-right {
+        margin-left: 5px;
+      }
+    }
+    .check-box {
+      margin-top: 40px;
+    }
+  }
+}
+// tab end--------------------------------------------------------------

@@ -77,4 +77,20 @@ $(function () {
     },
     autoplay: true,
   });
+
+  // Initialization for ES Users
+
+  // initMDB({ Tab });
+
+  // MDB tabs
+  const triggerTabList = document.querySelectorAll("#ex1 a");
+  triggerTabList.forEach((triggerEl) => {
+    const tabTrigger = new bootstrap.Tab(triggerEl);
+
+    triggerEl.addEventListener("click", (event) => {
+      event.preventDefault();
+      tabTrigger.show();
+    });
+  });
 });
+//

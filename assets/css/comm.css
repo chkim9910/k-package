@@ -1339,7 +1339,7 @@ button {
 }
 
 .swiper-box {
-  height: 500px;
+  height: 300px;
   margin-bottom: 100px;
   position: relative;
   top: 250px;
@@ -1364,6 +1364,115 @@ button {
 .swiper-text {
   font-size: 16px;
   color: #222;
+}
+
+.tab-box {
+  height: 500px;
+  position: relative;
+  top: 150px;
+}
+
+.nav {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.nav-tabs .nav-link {
+  display: flex;
+  padding-left: 40px;
+  width: 190px;
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+  background: url("/assets/img/consulting-unactive.png") no-repeat 50% 50%/cover;
+  transition: all 0.2s;
+}
+.nav-tabs .nav-link.active {
+  background: url("/assets/img/consulting-background.png") no-repeat 50% 50%/cover;
+  background-color: transparent;
+  color: #494949;
+  border-color: transparent;
+}
+.nav-tabs .nav-link:hover {
+  background: url("/assets/img/consulting-background.png") no-repeat 50% 50%/cover;
+  background-color: transparent;
+  color: #494949;
+  border-color: transparent;
+}
+.nav-tabs .nav-item:first-child {
+  position: relative;
+  z-index: 4;
+}
+.nav-tabs .nav-item:nth-child(2) {
+  transform: translateX(-45px);
+  position: relative;
+  z-index: 3;
+}
+.nav-tabs .nav-item:nth-child(3) {
+  transform: translateX(-89px);
+  position: relative;
+  z-index: 2;
+}
+.nav-tabs .nav-item:nth-child(4) {
+  transform: translateX(-132px);
+  position: relative;
+  z-index: 1;
+}
+
+.tab-content {
+  width: 675px;
+  height: 344px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  position: relative;
+  top: -16px;
+  border-radius: 0 16px 16px 16px;
+  padding: 20px;
+}
+.tab-content .tab-pane {
+  color: #494949;
+}
+.tab-content .tab-pane .top-box,
+.tab-content .tab-pane .bottom-box,
+.tab-content .tab-pane .check-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.tab-content .tab-pane .top-box .name,
+.tab-content .tab-pane .top-box .phone,
+.tab-content .tab-pane .bottom-box .name,
+.tab-content .tab-pane .bottom-box .phone,
+.tab-content .tab-pane .check-box .name,
+.tab-content .tab-pane .check-box .phone {
+  flex: 1;
+}
+.tab-content .tab-pane .top-box .form-check-label,
+.tab-content .tab-pane .bottom-box .form-check-label,
+.tab-content .tab-pane .check-box .form-check-label {
+  width: 75%;
+  color: #b6b6b6;
+  font-size: 14px;
+}
+.tab-content .tab-pane .top-box .btn,
+.tab-content .tab-pane .bottom-box .btn,
+.tab-content .tab-pane .check-box .btn {
+  background: #7daac1;
+  width: 20%;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tab-content .tab-pane .top-box .fa-arrow-right,
+.tab-content .tab-pane .bottom-box .fa-arrow-right,
+.tab-content .tab-pane .check-box .fa-arrow-right {
+  margin-left: 5px;
+}
+.tab-content .tab-pane .check-box {
+  margin-top: 40px;
 }
 
 .inner-box {
@@ -1491,4 +1600,7 @@ button {
   100% {
     transform: scale(1);
   }
+}
+.tabs-box {
+  height: 300px;
 }/*# sourceMappingURL=comm.css.map */
