@@ -1511,6 +1511,12 @@ button {
 .tab-content .tab-pane .check-box {
   margin-top: 40px;
 }
+.tab-content .tab-pane .form-check-input:before {
+  display: none;
+}
+.tab-content .tab-pane .form-check-input[type=checkbox]:checked:after {
+  display: none;
+}
 
 .inner-box {
   width: 100%;

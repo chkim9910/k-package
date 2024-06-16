@@ -405,6 +405,12 @@
     .check-box {
       margin-top: 40px;
     }
+    .form-check-input:before {
+      display: none;
+    }
+    .form-check-input[type="checkbox"]:checked:after {
+      display: none;
+    }
   }
 }
 // tab end--------------------------------------------------------------

@@ -59,7 +59,7 @@ $(function () {
 
   // swiper.js------------------------------------------------------
   let swiper = new Swiper(".mySwiper", {
-    initialSlide: 4,
+    initialSlide: 2,
     direction: "vertical",
     effect: "coverflow",
     centeredSlides: true,
@@ -76,19 +76,48 @@ $(function () {
       slideShadows: true,
     },
     autoplay: true,
+
+    // eventlistener 이벤트리스너 등록
+    on: {
+      slideChange: function () {
+        updateActiveSlideIcon();
+      },
+    },
   });
 
   // swiper-slide-active의 icon 색상 바꾸기
-  let swiperSlideArray = Array.from(document.querySelectorAll(".swiper-slide"));
-  let swiperActive = document.querySelector(".swiper-slide-active");
-
-  for (i = 0; i < swiperSlideArray.length; i++) {
-    console.log(swiperSlideArray[i]);
-    if (swiperSlideArray[i].classList.contains("swiper-slide-active")) {
-      let swiperIcon = swiperSlideArray[i].querySelector(".fa-circle-check");
-      swiperIcon.style.color = "#a1c9de";
+  function updateActiveSlideIcon() {
+    let swiperSlideArray = Array.from(
+      document.querySelectorAll(".swiper-slide")
+    );
+    // 아이콘 색상 초기화
+    swiperSlideArray.forEach((slide) => {
+      let swiperIcon = slide.querySelector(".fa-circle-check");
+      if (swiperIcon) {
+        swiperIcon.style.color = "#494949";
+      }
+    });
+    // active된 슬라이드의 아이콘 색상 변경
+    let swiperActive = document.querySelector(".swiper-slide-next");
+    if (swiperActive) {
+      let swiperIcon = swiperActive.querySelector(".fa-circle-check");
+      if (swiperIcon) {
+        swiperIcon.style.color = "#a1c9de";
+      }
     }
   }
+  // 초기 로드 시에 아이콘 색상 업데이트
+  // updateActiveSlideIcon();
+
+  // let swiperActive = document.querySelector(".swiper-slide-active");
+
+  // for (i = 0; i < swiperSlideArray.length; i++) {
+  //   // console.log(swiperSlideArray[i]);
+  //   if (swiperSlideArray[i].classList.contains("swiper-slide-active")) {
+  //     let swiperIcon = swiperSlideArray[i].querySelector(".fa-circle-check");
+  //     swiperIcon.style.color = "#a1c9de";
+  //   }
+  // }
 
   // MDB tabs
   const triggerTabList = document.querySelectorAll("#ex1 a");
