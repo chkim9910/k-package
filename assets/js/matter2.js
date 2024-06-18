@@ -129,6 +129,9 @@ const leftWall = Bodies.rectangle(
 );
 const rightWall = Bodies.rectangle(0, windowHeight / 1, 60, windowHeight * 2, {
   isStatic: true,
+  render: {
+    fillStyle: "transparent",
+  },
 });
 const topWall = Bodies.rectangle(
   windowWidth / 2,
